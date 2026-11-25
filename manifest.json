@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dataUpTo": "2026-06-25",
+  "generatedAt": "2026-11-25T10:10:26Z",
+  "sourceFileDate": "2026-07-02",
+  "size": 217052,
+  "sha256": "b2f5b13b24b9262e3f11bc86529b9321b7d0e181c6ba6c6b5840fc36449a1ba5",
+  "schemaVersion": 1,
+  "url": "https://chigz90.github.io/streetcrimemapuk-data/flood_history.json.gz",
+  "sourceSha256": "4ffd560a948b3fb2d1026d928208f2a79ba991c0f82852112f83b1bca93a0dda",
+  "sourceUrl": "https://environment.data.gov.uk/api/file/download?fileDataSetId=766cb094-b392-4bd6-a02e-f60e143f3213&fileName=Historic_Flood_Warnings.zip",
+  "attribution": "Contains Environment Agency information \u00a9 Environment Agency and/or database right. Licensed under the Open Government Licence v3.0."
+}
