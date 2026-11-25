@@ -77,3 +77,4 @@ footer { background: var(--navy); color: rgba(255,255,255,.85); font-size: .95re
 footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
 footer a { color: #fff; } footer .copy { margin-left: auto; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.coverage { margin-top: 20px; }
