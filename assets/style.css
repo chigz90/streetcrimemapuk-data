@@ -1,0 +1,79 @@
+/* Street Crime Map UK – static site. No tracking, no cookies, no external requests. */
+:root {
+  --navy: #0B1E4D; --cobalt: #2F6BFF; --mid: #1B46C9; --coral: #FF8A5B; --pink: #FF5FA2;
+  --bg: #F7F8FC; --surface: #FFFFFF; --text: #111322; --muted: #555D70; --line: #E3E7F0; --link: #1B46C9;
+  --radius: 20px; --max: 1080px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #070D1F; --surface: #111A33; --text: #F2F4FA; --muted: #A9B2C7; --line: #24304F; --link: #8DB2FF; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.6;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+h1, h2, h3, .brand { font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; }
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 6px; }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { width: min(var(--max), 100% - 32px); margin-inline: auto; }
+.skip { position: absolute; left: -999px; } .skip:focus { left: 16px; top: 16px; z-index: 9; background: var(--surface); padding: 8px 12px; }
+
+/* Header bar */
+.bar { background: var(--navy); color: #fff; }
+.bar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 12px; flex-wrap: wrap; }
+.bar a { color: #fff; text-decoration: none; }
+.bar .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; margin-right: auto; }
+.bar .brand img { width: 32px; height: 32px; border-radius: 22.37%; }
+.bar nav a { opacity: .9; margin-left: 14px; font-size: .95rem; } .bar nav a:hover { opacity: 1; text-decoration: underline; }
+
+/* Hero */
+.hero { color: #fff; position: relative; overflow: hidden;
+  background: radial-gradient(60% 50% at 85% 10%, rgba(255,138,91,.45), rgba(255,95,162,.18) 45%, transparent 70%),
+              linear-gradient(180deg, var(--cobalt) 0%, var(--mid) 50%, var(--navy) 100%); }
+.hero .wrap { display: grid; gap: 32px; padding-block: 56px 64px; align-items: center; }
+@media (min-width: 860px) { .hero .wrap { grid-template-columns: 1.05fr 1fr; padding-block: 80px; } }
+.hero .icon { width: 112px; height: 112px; border-radius: 22.37%; box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 20px 0 8px; }
+.hero .subtitle { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 600; margin: 0 0 12px; opacity: .95; }
+.hero p { color: rgba(255,255,255,.9); max-width: 34em; }
+.badge { display: inline-block; margin-top: 20px; }
+.badge img { height: 54px; width: auto; }   /* Apple badge: unmodified artwork, at least 40 px tall */
+.hero .shot { justify-self: center; width: min(420px, 100%); filter: drop-shadow(0 24px 48px rgba(0,0,0,.35)); border-radius: 18px; }
+
+/* Sections */
+main section { padding-block: 56px; }
+.lead { color: var(--muted); max-width: 40em; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 12px; }
+.features { display: grid; gap: 40px; }
+.feature { display: grid; gap: 24px; align-items: center; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 24px; }
+@media (min-width: 760px) { .feature { grid-template-columns: 1fr 1.2fr; padding: 32px; } .feature:nth-child(even) .media { order: 2; } }
+.feature .media img { border-radius: 16px; margin-inline: auto; width: min(340px, 100%); }
+.feature h3 { font-size: 1.5rem; margin: 0 0 8px; }
+.feature p { margin: 0 0 8px; color: var(--muted); }
+.cards { display: grid; gap: 16px; } @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.card h3 { margin: 0 0 8px; font-size: 1.3rem; }
+.card ul { margin: 0; padding-left: 1.2em; color: var(--muted); }
+.pro { border-color: #F59E0B; }
+.pill { display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .04em; padding: 2px 8px; border-radius: 6px;
+  background: linear-gradient(90deg, #F59E0B, #FBBF24); color: #3A2400; vertical-align: middle; }
+.sources { display: grid; gap: 12px; } @media (min-width: 760px) { .sources { grid-template-columns: 1fr 1fr; } }
+.sources .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.attribution { font-size: .9rem; color: var(--muted); }
+
+/* Text pages */
+.page { padding-block: 40px 64px; max-width: 760px; }
+.page h1 { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 6px; }
+.page h2 { font-size: 1.3rem; margin: 32px 0 6px; }
+.page .updated { color: var(--muted); margin-top: 0; }
+.page details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin: 10px 0; }
+.page summary { font-weight: 600; cursor: pointer; }
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 24px; margin-top: 24px; }
+
+/* Footer */
+footer { background: var(--navy); color: rgba(255,255,255,.85); font-size: .95rem; }
+footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+footer a { color: #fff; } footer .copy { margin-left: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
