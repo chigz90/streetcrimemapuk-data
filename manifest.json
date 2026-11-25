@@ -1,13 +1,34 @@
 {
-  "version": 1,
+  "version": 2,
+  "schemaVersion": 2,
   "dataUpTo": "2026-06-25",
-  "generatedAt": "2026-11-25T10:10:26Z",
+  "generatedAt": "2026-11-25T13:04:09Z",
   "sourceFileDate": "2026-07-02",
   "size": 217052,
   "sha256": "b2f5b13b24b9262e3f11bc86529b9321b7d0e181c6ba6c6b5840fc36449a1ba5",
-  "schemaVersion": 1,
   "url": "https://chigz90.github.io/streetcrimemapuk-data/flood_history.json.gz",
+  "files": {
+    "warnings": {
+      "name": "flood_history.json.gz",
+      "url": "https://chigz90.github.io/streetcrimemapuk-data/flood_history.json.gz",
+      "size": 217052,
+      "sha256": "b2f5b13b24b9262e3f11bc86529b9321b7d0e181c6ba6c6b5840fc36449a1ba5"
+    },
+    "areas": {
+      "name": "flood_areas.json.gz",
+      "url": "https://chigz90.github.io/streetcrimemapuk-data/flood_areas.json.gz",
+      "size": 177355,
+      "sha256": "cbbdf196919d6a5d9ecc58d61d1dbec389ad4a52b3c629d353255fe294d7a2ac"
+    },
+    "recordedFloods": {
+      "name": "recorded_floods.json.gz",
+      "url": "https://chigz90.github.io/streetcrimemapuk-data/recorded_floods.json.gz",
+      "size": 732574,
+      "sha256": "7fd920bb4ad514525fcea8a71a2a2df838df9a65c214b5b7c771ed474edbff3d"
+    }
+  },
   "sourceSha256": "4ffd560a948b3fb2d1026d928208f2a79ba991c0f82852112f83b1bca93a0dda",
   "sourceUrl": "https://environment.data.gov.uk/api/file/download?fileDataSetId=766cb094-b392-4bd6-a02e-f60e143f3213&fileName=Historic_Flood_Warnings.zip",
-  "attribution": "Contains Environment Agency information \u00a9 Environment Agency and/or database right. Licensed under the Open Government Licence v3.0."
+  "recordedFloodsRelease": "This is the September 2026 release.",
+  "attribution": "Contains Environment Agency information © Environment Agency and/or database right. Licensed under the Open Government Licence v3.0."
 }
